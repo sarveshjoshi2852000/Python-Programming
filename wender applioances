@@ -1,0 +1,46 @@
+from easygui import *
+import sys
+while 1:
+     msgbox("welcome, chose things to begain shoping")
+     msg="what will u like to buy ?"
+     title="sj mart co."
+     choices =["mobile","laptops","tablets","home appliances"]
+     choice = choicebox(msg, title, choices)
+     msgbox("youchose:"+ str(choice))
+        if  (choice=="mobile"):
+          msgbox1("which brand will u like to see?")
+          msg1="which brand"
+          title1="mobile brand"
+          choices1=["samsung","apple","1 plus","other"]
+          choice1= choicebox(msg1,title1,choices1)
+          msgbox("youchose:"+ str(choice1))
+                if   (choice=="samsung"):
+                        msg="which mobile"
+                        title="all apple mobile"
+                        choices=["j7= 15000","j3=10000","j5=20000"]
+                        choice= choicebox(msg,title,choices)
+                        msgbox("youchose:"+ str(choice))
+                elif (choice=="1 plus)":
+                        msg="which mobile"
+                        title="all 1 plus mobile"
+                        choices=["1 plus 3=15000","1 plus 6 =26000","1 plus 6T=48999"]
+                        choice= choicebox(msg,title,choices)
+                        msgbox("youchose:"+ str(choice))
+
+                elif (choice=="apple"):
+                        msg="which mobile"
+                        title="all apple mobile"
+                        choices=["i phone 7= 25000","i phone 7 plus=46000","i phone x=99999"]
+   else :
+                        msg="which mobile"
+                        title="all other mobile"
+                        choices=["no phone available click to continue"]
+                        choice= choicebox(msg,title,choices)
+                        msgbox("you chose:"+ str(choice),"selected item")
+                        msg= "do u want to continue"    
+                        title="please conform"
+         else:
+               sys.exit(0)
+
+ 
+
