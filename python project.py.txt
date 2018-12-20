@@ -442,29 +442,29 @@ for i in l:
 
  sum+=i
 
- a2=sum
+ a2=sum                                                                                #Total bill without any discounts
 
 y=[]
 
 a1=0
 
-if ccbox("Would you like to participate in a quiz?","*DISCOUNT ALERT*"):
+if ccbox("Would you like to participate in a quiz?","*DISCOUNT ALERT*"):               #Quiz 
 
-      msgbox(msg="The following quiz will give you an opprtunity of grab exciting discounts*",title="Quiz")
+      
 
-      msg1="Who is the speaker of RajyaSabha?"
+      msg1="Who is the speaker of RajyaSabha?"                                      #Quiz questions
 
       title1=""
 
-      choice1=("Sumitra Mahajan","PJ Kurien","Narendra Modi","V Naidu")
+      choice1=("Sumitra Mahajan","PJ Kurien","Narendra Modi","V Naidu")              #Choices for answers
 
       Assa=buttonbox(msg1,title1,choices=choice1)
 
-      if Assa=="Sumitra Mahajan":
+      if Assa=="Sumitra Mahajan":                                                     #Option selection
 
          a1+=1
 
-         y.append(a1)
+         y.append(a1)                                                                 #Correct answer is appended to the open list y
 
       else: 
 
@@ -534,13 +534,13 @@ if ccbox("Would you like to participate in a quiz?","*DISCOUNT ALERT*"):
 
         msgbox("Sorry you have lost the quiz","")
 
-from Tkinter import *
+from Tkinter import *                                             #Tkinter is imported for Lucky Draw
 
-import random
+import random                                                     #Random function is imported 
 
 def roll():    
 
-    r = random.randint(1, 6)
+    r = random.randint(1, 6)                                       #Random number is selected between 1 to 6 by using randint function
 
     s=str(r)
 
@@ -550,7 +550,7 @@ def roll():
 
 root = Tk()
 
-root.geometry("100x100")
+root.geometry("100x100")                                          #Geometry of widget
 
 label = Label(root, text="Dice Roller")
 
@@ -572,8 +572,6 @@ if s=="6":
 
     a4=(a2*0.05)
 
-A=a2-(a3+a4)
+A=a2-(a3+a4)                                                           #Total bill including discounts from quiz and lucky draw
 
-print("Total Cost is:",A,"Discount from Quiz:",a3,"Discount from Luckdraw:",a4)                                                 #Total cost is shown
-
-                        
+print("Total Cost is:",A,"Discount from Quiz:",a3,"Discount from Luckdraw:",a4)                  #Total cost is printed along and discount price is shown explicitely
